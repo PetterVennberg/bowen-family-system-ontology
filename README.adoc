@@ -1,0 +1,26 @@
+= Kinship Ontology
+:sectnums:
+
+Welcome to the Kinship Ontology repository! This ontology is designed to model kinship relationships within a family, including various roles, relationships, and attributes.
+
+== Overview
+The Kinship Ontology provides a formal structure for representing family relationships and individual attributes within a kinship network. It includes classes for `Person` and `Family`, as well as properties to define relationships such as parenthood, sibling relationships, birth order, and more.
+
+== Ontology Details
+* **IRI**: `http://www.vberg.dev/ontologies/kinship#`
+* **Prefix**: `kinship`
+
+== Usage
+You can use this ontology in your semantic web applications to model and query kinship relationships. The ontology is serialized in Turtle (.ttl) format and can be loaded into any RDF-compatible software or ontology editor, such as Protégé.
+
+== Contributing
+We welcome contributions! If you'd like to contribute, please fork the repository and create a pull request with your changes.
+
+=== Development Setup
+. Clone the repo.
+. Install necessary tools (e.g., Protégé for ontology editing).
+. Make your changes in a new branch.
+. Submit a pull request for review.
+
+== License
+This project is licensed under the MIT License.
