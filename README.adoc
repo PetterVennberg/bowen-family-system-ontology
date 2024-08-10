@@ -2,12 +2,14 @@
 :sectnums:
 
 Welcome to the Kinship Ontology repository! This ontology is designed to model kinship relationships within a family, including various roles, relationships, and attributes.
+The ontology's primary goal is to be compatible with Web Protégé and act as a base for the Bowen Family System Theory ontology.
+This is to enable the usage of Web Protégé to create graphs of family systems.
 
 == Overview
 The Kinship Ontology provides a formal structure for representing family relationships and individual attributes within a kinship network. It includes classes for `Person` and `Family`, as well as properties to define relationships such as parenthood, sibling relationships, birth order, and more.
 
 == Ontology Details
-* **IRI**: `http://www.vberg.dev/ontologies/kinship#`
+* **IRI**: `https://www.vberg.dev/ontologies/kinship#`
 * **Prefix**: `kinship`
 
 == Usage
