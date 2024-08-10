@@ -1,13 +1,13 @@
-@prefix : <https://www.vberg.dev/ontologies/kinship#> .
+@prefix : <https://www.vberg.dev/ontologies/bowen-familiy-system#> .
+@prefix bfs: <https://www.vberg.dev/ontologies/bowen-familiy-system#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix kinship: <https://www.vberg.dev/ontologies/kinship#> .
-@base <https://www.vberg.dev/ontologies/kinship#> .
+@base <https://www.vberg.dev/ontologies/bowen-familiy-system#> .
 
-<https://www.vberg.dev/ontologies/kinship#> rdf:type owl:Ontology .
+<https://www.vberg.dev/ontologies/bowen-familiy-system#> rdf:type owl:Ontology .
 
 #################################################################
 #    Datatypes
@@ -21,451 +21,458 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://www.vberg.dev/ontologies/kinship#belongsToFamily
-kinship:belongsToFamily rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf kinship:hasFamilyRelationship ;
-                        owl:inverseOf kinship:hasFamilyMember ;
-                        rdfs:domain kinship:Person ;
-                        rdfs:range kinship:Family ;
-                        rdfs:comment "Represents the relationship where a person belongs to a family."@en ;
-                        rdfs:label "belongsToFamily"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#belongsToFamily
+bfs:belongsToFamily rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf bfs:hasFamilyRelationship ;
+                    owl:inverseOf bfs:hasFamilyMember ;
+                    rdfs:domain bfs:Person ;
+                    rdfs:range bfs:Family ;
+                    rdfs:comment "Represents the relationship where a person belongs to a family."@en ;
+                    rdfs:label "belongsToFamily"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasAdoptiveChild
-kinship:hasAdoptiveChild rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf kinship:hasChild ;
-                         owl:inverseOf kinship:hasAdoptiveParent ;
-                         rdfs:comment "Represents the relationship where a person has an adoptive child."@en ;
-                         rdfs:label "hasAdoptiveChild"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasAdoptiveChild
+bfs:hasAdoptiveChild rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf bfs:hasChild ;
+                     owl:inverseOf bfs:hasAdoptiveParent ;
+                     rdfs:comment "Represents the relationship where a person has an adoptive child."@en ;
+                     rdfs:label "hasAdoptiveChild"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasAdoptiveParent
-kinship:hasAdoptiveParent rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf kinship:hasParent ;
-                          rdfs:comment "Represents the relationship where a person has an adoptive parent."@en ;
-                          rdfs:label "hasAdoptiveParent"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasAdoptiveParent
+bfs:hasAdoptiveParent rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf bfs:hasParent ;
+                      rdfs:comment "Represents the relationship where a person has an adoptive parent."@en ;
+                      rdfs:label "hasAdoptiveParent"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasAunt
-kinship:hasAunt rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                owl:inverseOf kinship:isAuntOf ;
-                rdfs:domain kinship:Person ;
-                rdfs:range kinship:Person ;
-                rdfs:comment "Represents the relationship where an individual has an aunt (a female sibling of a parent)."@en ;
-                rdfs:label "hasAunt"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasAunt
+bfs:hasAunt rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+            owl:inverseOf bfs:isAuntOf ;
+            rdfs:domain bfs:Person ;
+            rdfs:range bfs:Person ;
+            rdfs:comment "Represents the relationship where an individual has an aunt (a female sibling of a parent)."@en ;
+            rdfs:label "hasAunt"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasBiologicalChild
-kinship:hasBiologicalChild rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf kinship:hasChild ;
-                           owl:inverseOf kinship:hasBiologicalParent ;
-                           rdfs:comment "Represents the relationship where a person has a biological child."@en ;
-                           rdfs:label "hasBiologicalChild"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasBiologicalChild
+bfs:hasBiologicalChild rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf bfs:hasChild ;
+                       owl:inverseOf bfs:hasBiologicalParent ;
+                       rdfs:comment "Represents the relationship where a person has a biological child."@en ;
+                       rdfs:label "hasBiologicalChild"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasBiologicalParent
-kinship:hasBiologicalParent rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf kinship:hasParent ;
-                            rdfs:comment "Represents the relationship where a person has a biological parent."@en ;
-                            rdfs:label "hasBiologicalParent"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasBiologicalParent
+bfs:hasBiologicalParent rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf bfs:hasParent ;
+                        rdfs:comment "Represents the relationship where a person has a biological parent."@en ;
+                        rdfs:label "hasBiologicalParent"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasCaretaker
-kinship:hasCaretaker rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
-                     rdfs:comment "Represents the relationship where a person has a caretaker."@en ;
-                     rdfs:label "hasCaretaker"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasCaretaker
+bfs:hasCaretaker rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+                 owl:inverseOf bfs:isCaretakerOf ;
+                 rdfs:comment "Represents the relationship where a person has a caretaker."@en ;
+                 rdfs:label "hasCaretaker"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasChild
-kinship:hasChild rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
-                 owl:inverseOf kinship:hasParent ;
-                 rdfs:domain kinship:Person ;
-                 rdfs:range kinship:Person ;
-                 rdfs:comment "Represents the relationship where a person has an undefined type of child."@en ;
-                 rdfs:label "hasChild"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasChild
+bfs:hasChild rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+             owl:inverseOf bfs:hasParent ;
+             rdfs:domain bfs:Person ;
+             rdfs:range bfs:Person ;
+             rdfs:comment "Represents the relationship where a person has an undefined type of child."@en ;
+             rdfs:label "hasChild"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasCousin
-kinship:hasCousin rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                  rdf:type owl:SymmetricProperty ;
-                  rdfs:domain kinship:Person ;
-                  rdfs:range kinship:Person ;
-                  rdfs:comment "Represents the relationship where two individuals are cousins."@en ;
-                  rdfs:label "hasCousin"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasCousin
+bfs:hasCousin rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+              rdf:type owl:SymmetricProperty ;
+              rdfs:domain bfs:Person ;
+              rdfs:range bfs:Person ;
+              rdfs:comment "Represents the relationship where two individuals are cousins."@en ;
+              rdfs:label "hasCousin"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasExPartner
-kinship:hasExPartner rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
-                     rdf:type owl:SymmetricProperty ;
-                     rdfs:comment "Represents a relationship where two people used to be romantically involved."@en ;
-                     rdfs:label "hasExPartner"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasExPartner
+bfs:hasExPartner rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+                 rdf:type owl:SymmetricProperty ;
+                 rdfs:comment "Represents a relationship where two people used to be romantically involved."@en ;
+                 rdfs:label "hasExPartner"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasExSpouse
-kinship:hasExSpouse rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf kinship:hasExPartner ;
-                    rdf:type owl:SymmetricProperty ;
-                    rdfs:comment "Represents a relationship where two people used to be married."@en ;
-                    rdfs:label "hasExSpouse"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasExSpouse
+bfs:hasExSpouse rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf bfs:hasExPartner ;
+                rdf:type owl:SymmetricProperty ;
+                rdfs:comment "Represents a relationship where two people used to be married."@en ;
+                rdfs:label "hasExSpouse"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasExtendedFamilyMember
-kinship:hasExtendedFamilyMember rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
-                                rdfs:comment "Represents a general relationship between a person and an extended family member, such as an aunt, uncle, or grandparent."@en ;
-                                rdfs:label "hasExtendedFamilyMember"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasExtendedFamilyMember
+bfs:hasExtendedFamilyMember rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+                            rdf:type owl:SymmetricProperty ;
+                            rdfs:comment "Represents a general relationship between a person and an extended family member, such as an aunt, uncle, or grandparent."@en ;
+                            rdfs:label "hasExtendedFamilyMember"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasFamilyMember
-kinship:hasFamilyMember rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf kinship:hasFamilyRelationship ;
-                        rdfs:domain kinship:Family ;
-                        rdfs:range kinship:Person ;
-                        rdfs:comment "Represents the relationship where a family has members."@en ;
-                        rdfs:label "hasFamilyMember"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasFamilyMember
+bfs:hasFamilyMember rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf bfs:hasFamilyRelationship ;
+                    rdfs:domain bfs:Family ;
+                    rdfs:range bfs:Person ;
+                    rdfs:comment "Represents the relationship where a family has members."@en ;
+                    rdfs:label "hasFamilyMember"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasFamilyRelationship
-kinship:hasFamilyRelationship rdf:type owl:ObjectProperty ,
-                                       owl:SymmetricProperty ;
-                              rdfs:comment "Represents an unspecified relationship between a person and a family unit."@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasFamilyRelationship
+bfs:hasFamilyRelationship rdf:type owl:ObjectProperty ,
+                                   owl:SymmetricProperty ;
+                          rdfs:comment "Represents an unspecified relationship between a person and a family unit."@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasFullSibling
-kinship:hasFullSibling rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf kinship:hasSibling ;
-                       rdf:type owl:SymmetricProperty ;
-                       rdfs:comment "Represents the relationship where two individuals share both biological parents." ;
-                       rdfs:label "hasFullSibling"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasGrandchild
-kinship:hasGrandchild rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                      owl:inverseOf kinship:hasGrandparent ;
-                      rdfs:domain kinship:Person ;
-                      rdfs:range kinship:Person ;
-                      rdfs:comment "Represents the relationship where a grandparent has a grandchild."@en ;
-                      rdfs:label "hasGrandchild"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasGrandparent
-kinship:hasGrandparent rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                       rdfs:domain kinship:Person ;
-                       rdfs:range kinship:Person ;
-                       rdfs:comment "Represents the relationship where an individual has a grandparent."@en ;
-                       rdfs:label "hasGrandparent"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasHalfSibling
-kinship:hasHalfSibling rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf kinship:hasSibling ;
-                       rdf:type owl:SymmetricProperty ;
-                       rdfs:domain kinship:Person ;
-                       rdfs:range kinship:Person ;
-                       rdfs:comment "Represents the relationship where two individuals share only one biological parent."@en ;
-                       rdfs:label "hasHalfSibling"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasInterpersonalRelationship
-kinship:hasInterpersonalRelationship rdf:type owl:ObjectProperty ,
-                                              owl:SymmetricProperty ;
-                                     rdfs:domain kinship:Person ;
-                                     rdfs:range kinship:Person ;
-                                     rdfs:comment "Represents an undefined relationship between two people."@en ;
-                                     rdfs:label "hasInterpersonalRelationship"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasParent
-kinship:hasParent rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
-                  rdfs:domain kinship:Person ;
-                  rdfs:range kinship:Person ;
-                  rdfs:comment "Represents the relationship where a person has an undefined type of parent."@en ;
-                  rdfs:label "hasParent"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasPartner
-kinship:hasPartner rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasFullSibling
+bfs:hasFullSibling rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf bfs:hasSibling ;
                    rdf:type owl:SymmetricProperty ;
-                   rdfs:comment "Represents a relationship where two people are romantically involved."@en ;
-                   rdfs:label "hasPartner"@en .
+                   rdfs:comment "Represents the relationship where two individuals share both biological parents." ;
+                   rdfs:label "hasFullSibling"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasSex
-kinship:hasSex rdf:type owl:ObjectProperty ;
-               rdfs:domain kinship:Person ;
-               rdfs:range kinship:Sex ;
-               rdfs:comment "Represents the biological sex of a person, which is typically categorized as male, female, or intersex."@en ;
-               rdfs:label "hasSex" .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasGrandchild
+bfs:hasGrandchild rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+                  owl:inverseOf bfs:hasGrandparent ;
+                  rdfs:domain bfs:Person ;
+                  rdfs:range bfs:Person ;
+                  rdfs:comment "Represents the relationship where a grandparent has a grandchild."@en ;
+                  rdfs:label "hasGrandchild"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasSibling
-kinship:hasSibling rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasGrandparent
+bfs:hasGrandparent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+                   rdfs:domain bfs:Person ;
+                   rdfs:range bfs:Person ;
+                   rdfs:comment "Represents the relationship where an individual has a grandparent."@en ;
+                   rdfs:label "hasGrandparent"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasHalfSibling
+bfs:hasHalfSibling rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf bfs:hasSibling ;
                    rdf:type owl:SymmetricProperty ;
-                   rdfs:domain kinship:Person ;
-                   rdfs:range kinship:Person ;
-                   rdfs:comment "Represents the relationship where two individuals have an undefined sibling relationship.."@en ;
-                   rdfs:label "hasSibling"@en .
+                   rdfs:domain bfs:Person ;
+                   rdfs:range bfs:Person ;
+                   rdfs:comment "Represents the relationship where two individuals share only one biological parent."@en ;
+                   rdfs:label "hasHalfSibling"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasSiblingPosition
-kinship:hasSiblingPosition rdf:type owl:ObjectProperty ;
-                           rdfs:domain kinship:Person ;
-                           rdfs:range kinship:SiblingPosition ;
-                           rdfs:comment "Represents a persons sibling position."@en ;
-                           rdfs:label "hasSiblingPosition"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasInterpersonalRelationship
+bfs:hasInterpersonalRelationship rdf:type owl:ObjectProperty ,
+                                          owl:SymmetricProperty ;
+                                 rdfs:domain bfs:Person ;
+                                 rdfs:range bfs:Person ;
+                                 rdfs:comment "Represents an undefined relationship between two people."@en ;
+                                 rdfs:label "hasInterpersonalRelationship"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasSpouse
-kinship:hasSpouse rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf kinship:hasPartner ;
-                  rdf:type owl:SymmetricProperty ;
-                  rdfs:domain kinship:Person ;
-                  rdfs:range kinship:Person ;
-                  rdfs:comment "Represents the relationship where two individuals are married."@en ;
-                  rdfs:label "hasSpouse"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasParent
+bfs:hasParent rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+              rdfs:domain bfs:Person ;
+              rdfs:range bfs:Person ;
+              rdfs:comment "Represents the relationship where a person has an undefined type of parent."@en ;
+              rdfs:label "hasParent"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasUncle
-kinship:hasUncle rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                 owl:inverseOf kinship:isUncleOf ;
-                 rdfs:domain kinship:Person ;
-                 rdfs:range kinship:Person ;
-                 rdfs:comment "Represents the relationship where an individual has an uncle (a male sibling of a parent)."@en ;
-                 rdfs:label "hasUncle"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasPartner
+bfs:hasPartner rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:comment "Represents a relationship where two people are romantically involved."@en ;
+               rdfs:label "hasPartner"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#isAuntOf
-kinship:isAuntOf rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                 rdfs:domain kinship:Person ;
-                 rdfs:range kinship:Person ;
-                 rdfs:comment "Represents the relationship where an aunt is related to a person."@en ;
-                 rdfs:label "isAuntOf"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSex
+bfs:hasSex rdf:type owl:ObjectProperty ;
+           rdfs:domain bfs:Person ;
+           rdfs:range bfs:Sex ;
+           rdfs:comment "Represents the biological sex of a person, which is typically categorized as male, female, or intersex."@en ;
+           rdfs:label "hasSex" .
 
 
-###  https://www.vberg.dev/ontologies/kinship#isUncleOf
-kinship:isUncleOf rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
-                  rdfs:domain kinship:Person ;
-                  rdfs:range kinship:Person ;
-                  rdfs:comment "Represents the relationship where an uncle is related to a person."@en ;
-                  rdfs:label "isUncleOf"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSibling
+bfs:hasSibling rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf bfs:hasInterpersonalRelationship ;
+               rdf:type owl:SymmetricProperty ;
+               rdfs:domain bfs:Person ;
+               rdfs:range bfs:Person ;
+               rdfs:comment "Represents the relationship where two individuals have an undefined sibling relationship.."@en ;
+               rdfs:label "hasSibling"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSiblingPosition
+bfs:hasSiblingPosition rdf:type owl:ObjectProperty ;
+                       rdfs:domain bfs:Person ;
+                       rdfs:range bfs:SiblingPosition ;
+                       rdfs:comment "Represents a persons sibling position."@en ;
+                       rdfs:label "hasSiblingPosition"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSpouse
+bfs:hasSpouse rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf bfs:hasPartner ;
+              rdf:type owl:SymmetricProperty ;
+              rdfs:domain bfs:Person ;
+              rdfs:range bfs:Person ;
+              rdfs:comment "Represents the relationship where two individuals are married."@en ;
+              rdfs:label "hasSpouse"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasUncle
+bfs:hasUncle rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+             owl:inverseOf bfs:isUncleOf ;
+             rdfs:domain bfs:Person ;
+             rdfs:range bfs:Person ;
+             rdfs:comment "Represents the relationship where an individual has an uncle (a male sibling of a parent)."@en ;
+             rdfs:label "hasUncle"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#isAuntOf
+bfs:isAuntOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+             rdfs:domain bfs:Person ;
+             rdfs:range bfs:Person ;
+             rdfs:comment "Represents the relationship where an aunt is related to a person."@en ;
+             rdfs:label "isAuntOf"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#isCaretakerOf
+bfs:isCaretakerOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf bfs:hasInterpersonalRelationship .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#isUncleOf
+bfs:isUncleOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf bfs:hasExtendedFamilyMember ;
+              rdfs:domain bfs:Person ;
+              rdfs:range bfs:Person ;
+              rdfs:comment "Represents the relationship where an uncle is related to a person."@en ;
+              rdfs:label "isUncleOf"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://www.vberg.dev/ontologies/kinship#hasContactInformation
-kinship:hasContactInformation rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf owl:topDataProperty .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasContactInformation
+bfs:hasContactInformation rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasDate
-kinship:hasDate rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasDate
+bfs:hasDate rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasDateOfBirth
-kinship:hasDateOfBirth rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf kinship:hasDate ;
-                       rdfs:domain kinship:Person ;
-                       rdfs:range xsd:date ;
-                       rdfs:comment "Represents the date on which a person was born."@en ;
-                       rdfs:label "hasDateOfBirth"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasDateOfBirth
+bfs:hasDateOfBirth rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf bfs:hasDate ;
+                   rdfs:domain bfs:Person ;
+                   rdfs:range xsd:date ;
+                   rdfs:comment "Represents the date on which a person was born."@en ;
+                   rdfs:label "hasDateOfBirth"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasDateOfDeath
-kinship:hasDateOfDeath rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf kinship:hasDate ;
-                       rdfs:domain kinship:Person ;
-                       rdfs:range xsd:date ;
-                       rdfs:comment "Represents the date on which a person passed away."@en ;
-                       rdfs:label "hasDateOfDeath"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasDateOfDeath
+bfs:hasDateOfDeath rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf bfs:hasDate ;
+                   rdfs:domain bfs:Person ;
+                   rdfs:range xsd:date ;
+                   rdfs:comment "Represents the date on which a person passed away."@en ;
+                   rdfs:label "hasDateOfDeath"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasEmailAddress
-kinship:hasEmailAddress rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf kinship:hasContactInformation ;
-                        rdfs:domain kinship:Person ;
-                        rdfs:range xsd:string ;
-                        rdfs:comment "Represents the email address of a person."@en ;
-                        rdfs:label "hasEmailAddress"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasFirstName
-kinship:hasFirstName rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf kinship:hasName ;
-                     rdfs:domain kinship:Person ;
-                     rdfs:range xsd:string ;
-                     rdfs:comment "Represents the first name (given name) of a person."@en ;
-                     rdfs:label "hasFirstName"@en .
-
-
-###  https://www.vberg.dev/ontologies/kinship#hasLastName
-kinship:hasLastName rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf kinship:hasName ;
-                    rdfs:domain kinship:Person ;
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasEmailAddress
+bfs:hasEmailAddress rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf bfs:hasContactInformation ;
+                    rdfs:domain bfs:Person ;
                     rdfs:range xsd:string ;
-                    rdfs:comment "Represents the last name (family name or surname) of a person."@en ;
-                    rdfs:label "hasLastName"@en .
+                    rdfs:comment "Represents the email address of a person."@en ;
+                    rdfs:label "hasEmailAddress"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasName
-kinship:hasName rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasFirstName
+bfs:hasFirstName rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf bfs:hasName ;
+                 rdfs:domain bfs:Person ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Represents the first name (given name) of a person."@en ;
+                 rdfs:label "hasFirstName"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasNationality
-kinship:hasNationality rdf:type owl:DatatypeProperty ;
-                       rdfs:domain kinship:Person ;
-                       rdfs:range xsd:string ;
-                       rdfs:comment "Represents the nationality of a person."@en ;
-                       rdfs:label "hasNationality"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasLastName
+bfs:hasLastName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf bfs:hasName ;
+                rdfs:domain bfs:Person ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Represents the last name (family name or surname) of a person."@en ;
+                rdfs:label "hasLastName"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasPhoneNumber
-kinship:hasPhoneNumber rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf kinship:hasContactInformation ;
-                       rdfs:domain kinship:Person ;
-                       rdfs:range xsd:string ;
-                       rdfs:comment "Represents the phone number of a person."@en ;
-                       rdfs:label "hasPhoneNumber"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasName
+bfs:hasName rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasPlaceOfBirth
-kinship:hasPlaceOfBirth rdf:type owl:DatatypeProperty ;
-                        rdfs:domain kinship:Person ;
-                        rdfs:range xsd:string ;
-                        rdfs:comment "Represents the place where a person was born."@en ;
-                        rdfs:label "hasPlaceOfBirth"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasNationality
+bfs:hasNationality rdf:type owl:DatatypeProperty ;
+                   rdfs:domain bfs:Person ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Represents the nationality of a person."@en ;
+                   rdfs:label "hasNationality"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasPlaceOfDeath
-kinship:hasPlaceOfDeath rdf:type owl:DatatypeProperty ;
-                        rdfs:domain kinship:Person ;
-                        rdfs:range xsd:string ;
-                        rdfs:comment "Represents the place where a person passed away."@en ;
-                        rdfs:label "hasPlaceOfDeath"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasPhoneNumber
+bfs:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf bfs:hasContactInformation ;
+                   rdfs:domain bfs:Person ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Represents the phone number of a person."@en ;
+                   rdfs:label "hasPhoneNumber"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasPreferredName
-kinship:hasPreferredName rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf kinship:hasName ;
-                         rdfs:domain kinship:Person ;
-                         rdfs:range xsd:string ;
-                         rdfs:comment "Represents the name by which a person prefers to be addressed."@en ;
-                         rdfs:label "hasPreferredName"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasPlaceOfBirth
+bfs:hasPlaceOfBirth rdf:type owl:DatatypeProperty ;
+                    rdfs:domain bfs:Person ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Represents the place where a person was born."@en ;
+                    rdfs:label "hasPlaceOfBirth"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#hasSocialSecurityNumber
-kinship:hasSocialSecurityNumber rdf:type owl:DatatypeProperty ;
-                                rdfs:domain kinship:Person ;
-                                rdfs:range xsd:string ;
-                                rdfs:comment "Represents the social security number (or equivalent identifier) of a person."@en ;
-                                rdfs:label "hasSocialSecurityNumber"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasPlaceOfDeath
+bfs:hasPlaceOfDeath rdf:type owl:DatatypeProperty ;
+                    rdfs:domain bfs:Person ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Represents the place where a person passed away."@en ;
+                    rdfs:label "hasPlaceOfDeath"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasPreferredName
+bfs:hasPreferredName rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf bfs:hasName ;
+                     rdfs:domain bfs:Person ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Represents the name by which a person prefers to be addressed."@en ;
+                     rdfs:label "hasPreferredName"@en .
+
+
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSocialSecurityNumber
+bfs:hasSocialSecurityNumber rdf:type owl:DatatypeProperty ;
+                            rdfs:domain bfs:Person ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Represents the social security number (or equivalent identifier) of a person."@en ;
+                            rdfs:label "hasSocialSecurityNumber"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://www.vberg.dev/ontologies/kinship#Enumeration
-kinship:Enumeration rdf:type owl:Class ;
-                    rdfs:comment "A class representing a finite set of predefined values or instances."@en ;
-                    rdfs:label "Enumeration"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Enumeration
+bfs:Enumeration rdf:type owl:Class ;
+                rdfs:comment "A class representing a finite set of predefined values or instances."@en ;
+                rdfs:label "Enumeration"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Family
-kinship:Family rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasFamilyMember ;
-                                 owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ;
-               rdfs:comment "Represents a family unit or group of persons related by blood, marriage, or adoption."@en ;
-               rdfs:label "Family"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Family
+bfs:Family rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty bfs:hasFamilyMember ;
+                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                             owl:onClass bfs:Person
+                           ] ;
+           rdfs:comment "Represents a family unit or group of persons related by blood, marriage, or adoption."@en ;
+           rdfs:label "Family"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Person
-kinship:Person rdf:type owl:Class ;
-               rdfs:comment "Represents an individual human being within the kinship network."@en ;
-               rdfs:label "Person"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Person
+bfs:Person rdf:type owl:Class ;
+           rdfs:comment "Represents an individual human being within the kinship network."@en ;
+           rdfs:label "Person"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Sex
-kinship:Sex rdf:type owl:Class ;
-            rdfs:subClassOf kinship:Enumeration ;
-            rdfs:comment "A class representing the biological categories of sex, typically male, female, or intersex."@en ;
-            rdfs:label "Sex"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Sex
+bfs:Sex rdf:type owl:Class ;
+        rdfs:subClassOf bfs:Enumeration ;
+        rdfs:comment "A class representing the biological categories of sex, typically male, female, or intersex."@en ;
+        rdfs:label "Sex"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#SiblingPosition
-kinship:SiblingPosition rdf:type owl:Class ;
-                        rdfs:subClassOf kinship:Enumeration ;
-                        rdfs:comment "An enumeration class to represent a persons position in the birth order."@en ;
-                        rdfs:label "SiblingPosition"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#SiblingPosition
+bfs:SiblingPosition rdf:type owl:Class ;
+                    rdfs:subClassOf bfs:Enumeration ;
+                    rdfs:comment "An enumeration class to represent a persons position in the birth order."@en ;
+                    rdfs:label "SiblingPosition"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://www.vberg.dev/ontologies/kinship#Female
-kinship:Female rdf:type owl:NamedIndividual ,
-                        kinship:Sex ;
-               rdfs:label "Female"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Female
+bfs:Female rdf:type owl:NamedIndividual ,
+                    bfs:Sex ;
+           rdfs:label "Female"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Firstborn
-kinship:Firstborn rdf:type owl:NamedIndividual ,
-                           kinship:SiblingPosition ;
-                  rdfs:comment "Represents the firstborn child."@en ;
-                  rdfs:label "Firstborn"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Firstborn
+bfs:Firstborn rdf:type owl:NamedIndividual ,
+                       bfs:SiblingPosition ;
+              rdfs:comment "Represents the firstborn child."@en ;
+              rdfs:label "Firstborn"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Intersex
-kinship:Intersex rdf:type owl:NamedIndividual ,
-                          kinship:Sex ;
-                 rdfs:label "Intersex"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Intersex
+bfs:Intersex rdf:type owl:NamedIndividual ,
+                      bfs:Sex ;
+             rdfs:label "Intersex"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Male
-kinship:Male rdf:type owl:NamedIndividual ,
-                      kinship:Sex ;
-             rdfs:label "Male"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Male
+bfs:Male rdf:type owl:NamedIndividual ,
+                  bfs:Sex ;
+         rdfs:label "Male"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#OnlyChild
-kinship:OnlyChild rdf:type owl:NamedIndividual ,
-                           kinship:SiblingPosition ;
-                  rdfs:comment "Represents an only child."@en ;
-                  rdfs:label "OnlyChild"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#OnlyChild
+bfs:OnlyChild rdf:type owl:NamedIndividual ,
+                       bfs:SiblingPosition ;
+              rdfs:comment "Represents an only child."@en ;
+              rdfs:label "OnlyChild"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Secondborn
-kinship:Secondborn rdf:type owl:NamedIndividual ,
-                            kinship:SiblingPosition ;
-                   rdfs:comment "Represents the secondborn child."@en ;
-                   rdfs:label "Secondborn"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Secondborn
+bfs:Secondborn rdf:type owl:NamedIndividual ,
+                        bfs:SiblingPosition ;
+               rdfs:comment "Represents the secondborn child."@en ;
+               rdfs:label "Secondborn"@en .
 
 
-###  https://www.vberg.dev/ontologies/kinship#Thirdborn
-kinship:Thirdborn rdf:type owl:NamedIndividual ,
-                           kinship:SiblingPosition ;
-                  rdfs:comment "Represents the thirdborn child."@en ;
-                  rdfs:label "Thirdborn"@en .
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Thirdborn
+bfs:Thirdborn rdf:type owl:NamedIndividual ,
+                       bfs:SiblingPosition ;
+              rdfs:comment "Represents the thirdborn child."@en ;
+              rdfs:label "Thirdborn"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
