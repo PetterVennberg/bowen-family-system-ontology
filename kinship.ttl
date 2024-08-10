@@ -1,13 +1,13 @@
-@prefix : <http://www.vberg.dev/ontologies/kinship#> .
+@prefix : <https://www.vberg.dev/ontologies/kinship#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix kinship: <http://www.vberg.dev/ontologies/kinship#> .
-@base <http://www.vberg.dev/ontologies/kinship#> .
+@prefix kinship: <https://www.vberg.dev/ontologies/kinship#> .
+@base <https://www.vberg.dev/ontologies/kinship#> .
 
-<http://www.vberg.dev/ontologies/kinship#> rdf:type owl:Ontology .
+<https://www.vberg.dev/ontologies/kinship#> rdf:type owl:Ontology .
 
 #################################################################
 #    Datatypes
@@ -21,7 +21,7 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.vberg.dev/ontologies/kinship#belongsToFamily
+###  https://www.vberg.dev/ontologies/kinship#belongsToFamily
 kinship:belongsToFamily rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf kinship:hasFamilyRelationship ;
                         owl:inverseOf kinship:hasFamilyMember ;
@@ -31,7 +31,7 @@ kinship:belongsToFamily rdf:type owl:ObjectProperty ;
                         rdfs:label "belongsToFamily"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasAdoptiveChild
+###  https://www.vberg.dev/ontologies/kinship#hasAdoptiveChild
 kinship:hasAdoptiveChild rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf kinship:hasChild ;
                          owl:inverseOf kinship:hasAdoptiveParent ;
@@ -39,14 +39,14 @@ kinship:hasAdoptiveChild rdf:type owl:ObjectProperty ;
                          rdfs:label "hasAdoptiveChild"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasAdoptiveParent
+###  https://www.vberg.dev/ontologies/kinship#hasAdoptiveParent
 kinship:hasAdoptiveParent rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf kinship:hasParent ;
                           rdfs:comment "Represents the relationship where a person has an adoptive parent."@en ;
                           rdfs:label "hasAdoptiveParent"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasAunt
+###  https://www.vberg.dev/ontologies/kinship#hasAunt
 kinship:hasAunt rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                 owl:inverseOf kinship:isAuntOf ;
@@ -56,7 +56,7 @@ kinship:hasAunt rdf:type owl:ObjectProperty ;
                 rdfs:label "hasAunt"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasBiologicalChild
+###  https://www.vberg.dev/ontologies/kinship#hasBiologicalChild
 kinship:hasBiologicalChild rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf kinship:hasChild ;
                            owl:inverseOf kinship:hasBiologicalParent ;
@@ -64,21 +64,21 @@ kinship:hasBiologicalChild rdf:type owl:ObjectProperty ;
                            rdfs:label "hasBiologicalChild"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasBiologicalParent
+###  https://www.vberg.dev/ontologies/kinship#hasBiologicalParent
 kinship:hasBiologicalParent rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf kinship:hasParent ;
                             rdfs:comment "Represents the relationship where a person has a biological parent."@en ;
                             rdfs:label "hasBiologicalParent"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasCaretaker
+###  https://www.vberg.dev/ontologies/kinship#hasCaretaker
 kinship:hasCaretaker rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                      rdfs:comment "Represents the relationship where a person has a caretaker."@en ;
                      rdfs:label "hasCaretaker"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasChild
+###  https://www.vberg.dev/ontologies/kinship#hasChild
 kinship:hasChild rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                  owl:inverseOf kinship:hasParent ;
@@ -88,7 +88,7 @@ kinship:hasChild rdf:type owl:ObjectProperty ;
                  rdfs:label "hasChild"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasCousin
+###  https://www.vberg.dev/ontologies/kinship#hasCousin
 kinship:hasCousin rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                   rdf:type owl:SymmetricProperty ;
@@ -98,7 +98,7 @@ kinship:hasCousin rdf:type owl:ObjectProperty ;
                   rdfs:label "hasCousin"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasExPartner
+###  https://www.vberg.dev/ontologies/kinship#hasExPartner
 kinship:hasExPartner rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                      rdf:type owl:SymmetricProperty ;
@@ -106,7 +106,7 @@ kinship:hasExPartner rdf:type owl:ObjectProperty ;
                      rdfs:label "hasExPartner"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasExSpouse
+###  https://www.vberg.dev/ontologies/kinship#hasExSpouse
 kinship:hasExSpouse rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf kinship:hasExPartner ;
                     rdf:type owl:SymmetricProperty ;
@@ -114,14 +114,14 @@ kinship:hasExSpouse rdf:type owl:ObjectProperty ;
                     rdfs:label "hasExSpouse"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasExtendedFamilyMember
+###  https://www.vberg.dev/ontologies/kinship#hasExtendedFamilyMember
 kinship:hasExtendedFamilyMember rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                                 rdfs:comment "Represents a general relationship between a person and an extended family member, such as an aunt, uncle, or grandparent."@en ;
                                 rdfs:label "hasExtendedFamilyMember"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasFamilyMember
+###  https://www.vberg.dev/ontologies/kinship#hasFamilyMember
 kinship:hasFamilyMember rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf kinship:hasFamilyRelationship ;
                         rdfs:domain kinship:Family ;
@@ -130,13 +130,13 @@ kinship:hasFamilyMember rdf:type owl:ObjectProperty ;
                         rdfs:label "hasFamilyMember"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasFamilyRelationship
-kinship:hasFamilyRelationship rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf owl:topObjectProperty ;
+###  https://www.vberg.dev/ontologies/kinship#hasFamilyRelationship
+kinship:hasFamilyRelationship rdf:type owl:ObjectProperty ,
+                                       owl:SymmetricProperty ;
                               rdfs:comment "Represents an unspecified relationship between a person and a family unit."@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasFullSibling
+###  https://www.vberg.dev/ontologies/kinship#hasFullSibling
 kinship:hasFullSibling rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf kinship:hasSibling ;
                        rdf:type owl:SymmetricProperty ;
@@ -144,7 +144,7 @@ kinship:hasFullSibling rdf:type owl:ObjectProperty ;
                        rdfs:label "hasFullSibling"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasGrandchild
+###  https://www.vberg.dev/ontologies/kinship#hasGrandchild
 kinship:hasGrandchild rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                       owl:inverseOf kinship:hasGrandparent ;
@@ -154,7 +154,7 @@ kinship:hasGrandchild rdf:type owl:ObjectProperty ;
                       rdfs:label "hasGrandchild"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasGrandparent
+###  https://www.vberg.dev/ontologies/kinship#hasGrandparent
 kinship:hasGrandparent rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                        rdfs:domain kinship:Person ;
@@ -163,7 +163,7 @@ kinship:hasGrandparent rdf:type owl:ObjectProperty ;
                        rdfs:label "hasGrandparent"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasHalfSibling
+###  https://www.vberg.dev/ontologies/kinship#hasHalfSibling
 kinship:hasHalfSibling rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf kinship:hasSibling ;
                        rdf:type owl:SymmetricProperty ;
@@ -173,16 +173,16 @@ kinship:hasHalfSibling rdf:type owl:ObjectProperty ;
                        rdfs:label "hasHalfSibling"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasInterpersonalRelationship
-kinship:hasInterpersonalRelationship rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf owl:topObjectProperty ;
+###  https://www.vberg.dev/ontologies/kinship#hasInterpersonalRelationship
+kinship:hasInterpersonalRelationship rdf:type owl:ObjectProperty ,
+                                              owl:SymmetricProperty ;
                                      rdfs:domain kinship:Person ;
                                      rdfs:range kinship:Person ;
                                      rdfs:comment "Represents an undefined relationship between two people."@en ;
                                      rdfs:label "hasInterpersonalRelationship"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasParent
+###  https://www.vberg.dev/ontologies/kinship#hasParent
 kinship:hasParent rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                   rdfs:domain kinship:Person ;
@@ -191,7 +191,7 @@ kinship:hasParent rdf:type owl:ObjectProperty ;
                   rdfs:label "hasParent"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasPartner
+###  https://www.vberg.dev/ontologies/kinship#hasPartner
 kinship:hasPartner rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                    rdf:type owl:SymmetricProperty ;
@@ -199,16 +199,15 @@ kinship:hasPartner rdf:type owl:ObjectProperty ;
                    rdfs:label "hasPartner"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasSex
+###  https://www.vberg.dev/ontologies/kinship#hasSex
 kinship:hasSex rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:domain kinship:Person ;
                rdfs:range kinship:Sex ;
                rdfs:comment "Represents the biological sex of a person, which is typically categorized as male, female, or intersex."@en ;
                rdfs:label "hasSex" .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasSibling
+###  https://www.vberg.dev/ontologies/kinship#hasSibling
 kinship:hasSibling rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf kinship:hasInterpersonalRelationship ;
                    rdf:type owl:SymmetricProperty ;
@@ -218,16 +217,15 @@ kinship:hasSibling rdf:type owl:ObjectProperty ;
                    rdfs:label "hasSibling"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasSiblingPosition
+###  https://www.vberg.dev/ontologies/kinship#hasSiblingPosition
 kinship:hasSiblingPosition rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf owl:topObjectProperty ;
                            rdfs:domain kinship:Person ;
                            rdfs:range kinship:SiblingPosition ;
                            rdfs:comment "Represents a persons sibling position."@en ;
                            rdfs:label "hasSiblingPosition"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasSpouse
+###  https://www.vberg.dev/ontologies/kinship#hasSpouse
 kinship:hasSpouse rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf kinship:hasPartner ;
                   rdf:type owl:SymmetricProperty ;
@@ -237,7 +235,7 @@ kinship:hasSpouse rdf:type owl:ObjectProperty ;
                   rdfs:label "hasSpouse"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasUncle
+###  https://www.vberg.dev/ontologies/kinship#hasUncle
 kinship:hasUncle rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                  owl:inverseOf kinship:isUncleOf ;
@@ -247,7 +245,7 @@ kinship:hasUncle rdf:type owl:ObjectProperty ;
                  rdfs:label "hasUncle"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#isAuntOf
+###  https://www.vberg.dev/ontologies/kinship#isAuntOf
 kinship:isAuntOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                  rdfs:domain kinship:Person ;
@@ -256,7 +254,7 @@ kinship:isAuntOf rdf:type owl:ObjectProperty ;
                  rdfs:label "isAuntOf"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#isUncleOf
+###  https://www.vberg.dev/ontologies/kinship#isUncleOf
 kinship:isUncleOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf kinship:hasExtendedFamilyMember ;
                   rdfs:domain kinship:Person ;
@@ -269,17 +267,17 @@ kinship:isUncleOf rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://www.vberg.dev/ontologies/kinship#hasContactInformation
+###  https://www.vberg.dev/ontologies/kinship#hasContactInformation
 kinship:hasContactInformation rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasDate
+###  https://www.vberg.dev/ontologies/kinship#hasDate
 kinship:hasDate rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasDateOfBirth
+###  https://www.vberg.dev/ontologies/kinship#hasDateOfBirth
 kinship:hasDateOfBirth rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf kinship:hasDate ;
                        rdfs:domain kinship:Person ;
@@ -288,7 +286,7 @@ kinship:hasDateOfBirth rdf:type owl:DatatypeProperty ;
                        rdfs:label "hasDateOfBirth"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasDateOfDeath
+###  https://www.vberg.dev/ontologies/kinship#hasDateOfDeath
 kinship:hasDateOfDeath rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf kinship:hasDate ;
                        rdfs:domain kinship:Person ;
@@ -297,7 +295,7 @@ kinship:hasDateOfDeath rdf:type owl:DatatypeProperty ;
                        rdfs:label "hasDateOfDeath"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasEmailAddress
+###  https://www.vberg.dev/ontologies/kinship#hasEmailAddress
 kinship:hasEmailAddress rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf kinship:hasContactInformation ;
                         rdfs:domain kinship:Person ;
@@ -306,7 +304,7 @@ kinship:hasEmailAddress rdf:type owl:DatatypeProperty ;
                         rdfs:label "hasEmailAddress"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasFirstName
+###  https://www.vberg.dev/ontologies/kinship#hasFirstName
 kinship:hasFirstName rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf kinship:hasName ;
                      rdfs:domain kinship:Person ;
@@ -315,7 +313,7 @@ kinship:hasFirstName rdf:type owl:DatatypeProperty ;
                      rdfs:label "hasFirstName"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasLastName
+###  https://www.vberg.dev/ontologies/kinship#hasLastName
 kinship:hasLastName rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf kinship:hasName ;
                     rdfs:domain kinship:Person ;
@@ -324,12 +322,12 @@ kinship:hasLastName rdf:type owl:DatatypeProperty ;
                     rdfs:label "hasLastName"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasName
+###  https://www.vberg.dev/ontologies/kinship#hasName
 kinship:hasName rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasNationality
+###  https://www.vberg.dev/ontologies/kinship#hasNationality
 kinship:hasNationality rdf:type owl:DatatypeProperty ;
                        rdfs:domain kinship:Person ;
                        rdfs:range xsd:string ;
@@ -337,7 +335,7 @@ kinship:hasNationality rdf:type owl:DatatypeProperty ;
                        rdfs:label "hasNationality"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasPhoneNumber
+###  https://www.vberg.dev/ontologies/kinship#hasPhoneNumber
 kinship:hasPhoneNumber rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf kinship:hasContactInformation ;
                        rdfs:domain kinship:Person ;
@@ -346,7 +344,7 @@ kinship:hasPhoneNumber rdf:type owl:DatatypeProperty ;
                        rdfs:label "hasPhoneNumber"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasPlaceOfBirth
+###  https://www.vberg.dev/ontologies/kinship#hasPlaceOfBirth
 kinship:hasPlaceOfBirth rdf:type owl:DatatypeProperty ;
                         rdfs:domain kinship:Person ;
                         rdfs:range xsd:string ;
@@ -354,7 +352,7 @@ kinship:hasPlaceOfBirth rdf:type owl:DatatypeProperty ;
                         rdfs:label "hasPlaceOfBirth"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasPlaceOfDeath
+###  https://www.vberg.dev/ontologies/kinship#hasPlaceOfDeath
 kinship:hasPlaceOfDeath rdf:type owl:DatatypeProperty ;
                         rdfs:domain kinship:Person ;
                         rdfs:range xsd:string ;
@@ -362,7 +360,7 @@ kinship:hasPlaceOfDeath rdf:type owl:DatatypeProperty ;
                         rdfs:label "hasPlaceOfDeath"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasPreferredName
+###  https://www.vberg.dev/ontologies/kinship#hasPreferredName
 kinship:hasPreferredName rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf kinship:hasName ;
                          rdfs:domain kinship:Person ;
@@ -371,7 +369,7 @@ kinship:hasPreferredName rdf:type owl:DatatypeProperty ;
                          rdfs:label "hasPreferredName"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#hasSocialSecurityNumber
+###  https://www.vberg.dev/ontologies/kinship#hasSocialSecurityNumber
 kinship:hasSocialSecurityNumber rdf:type owl:DatatypeProperty ;
                                 rdfs:domain kinship:Person ;
                                 rdfs:range xsd:string ;
@@ -383,13 +381,13 @@ kinship:hasSocialSecurityNumber rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://www.vberg.dev/ontologies/kinship#Enumeration
+###  https://www.vberg.dev/ontologies/kinship#Enumeration
 kinship:Enumeration rdf:type owl:Class ;
                     rdfs:comment "A class representing a finite set of predefined values or instances."@en ;
                     rdfs:label "Enumeration"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Family
+###  https://www.vberg.dev/ontologies/kinship#Family
 kinship:Family rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty kinship:hasFamilyMember ;
@@ -400,130 +398,20 @@ kinship:Family rdf:type owl:Class ;
                rdfs:label "Family"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Person
+###  https://www.vberg.dev/ontologies/kinship#Person
 kinship:Person rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:belongsToFamily ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Family
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasAdoptiveChild ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasAdoptiveParent ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasBiologicalChild ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasCaretaker ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasExPartner ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasExSpouse ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasFullSibling ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasHalfSibling ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasPartner ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasSpouse ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasBiologicalParent ;
-                                 owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Person
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasSex ;
-                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:Sex
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasSiblingPosition ;
-                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onClass kinship:SiblingPosition
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasDateOfBirth ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:date
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasDateOfDeath ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:date
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasFirstName ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasNationality ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasPlaceOfBirth ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasPlaceOfDeath ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasPreferredName ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:date
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty kinship:hasSocialSecurityNumber ;
-                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:string
-                               ] ;
                rdfs:comment "Represents an individual human being within the kinship network."@en ;
                rdfs:label "Person"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Sex
+###  https://www.vberg.dev/ontologies/kinship#Sex
 kinship:Sex rdf:type owl:Class ;
             rdfs:subClassOf kinship:Enumeration ;
             rdfs:comment "A class representing the biological categories of sex, typically male, female, or intersex."@en ;
             rdfs:label "Sex"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#SiblingPosition
+###  https://www.vberg.dev/ontologies/kinship#SiblingPosition
 kinship:SiblingPosition rdf:type owl:Class ;
                         rdfs:subClassOf kinship:Enumeration ;
                         rdfs:comment "An enumeration class to represent a persons position in the birth order."@en ;
@@ -534,58 +422,50 @@ kinship:SiblingPosition rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://www.vberg.dev/ontologies/kinship#Female
+###  https://www.vberg.dev/ontologies/kinship#Female
 kinship:Female rdf:type owl:NamedIndividual ,
                         kinship:Sex ;
                rdfs:label "Female"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Firstborn
+###  https://www.vberg.dev/ontologies/kinship#Firstborn
 kinship:Firstborn rdf:type owl:NamedIndividual ,
                            kinship:SiblingPosition ;
                   rdfs:comment "Represents the firstborn child."@en ;
                   rdfs:label "Firstborn"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Intersex
+###  https://www.vberg.dev/ontologies/kinship#Intersex
 kinship:Intersex rdf:type owl:NamedIndividual ,
                           kinship:Sex ;
                  rdfs:label "Intersex"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Male
+###  https://www.vberg.dev/ontologies/kinship#Male
 kinship:Male rdf:type owl:NamedIndividual ,
                       kinship:Sex ;
              rdfs:label "Male"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#OnlyChild
+###  https://www.vberg.dev/ontologies/kinship#OnlyChild
 kinship:OnlyChild rdf:type owl:NamedIndividual ,
                            kinship:SiblingPosition ;
                   rdfs:comment "Represents an only child."@en ;
                   rdfs:label "OnlyChild"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Secondborn
+###  https://www.vberg.dev/ontologies/kinship#Secondborn
 kinship:Secondborn rdf:type owl:NamedIndividual ,
                             kinship:SiblingPosition ;
                    rdfs:comment "Represents the secondborn child."@en ;
                    rdfs:label "Secondborn"@en .
 
 
-###  http://www.vberg.dev/ontologies/kinship#Thirdborn
+###  https://www.vberg.dev/ontologies/kinship#Thirdborn
 kinship:Thirdborn rdf:type owl:NamedIndividual ,
                            kinship:SiblingPosition ;
                   rdfs:comment "Represents the thirdborn child."@en ;
                   rdfs:label "Thirdborn"@en .
-
-
-###  http://www.vberg.dev/ontologies/kinship#Unknown
-kinship:Unknown rdf:type owl:NamedIndividual ,
-                         kinship:Person ,
-                         kinship:Sex ,
-                         kinship:SiblingPosition ;
-                rdfs:label "Unknown"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
