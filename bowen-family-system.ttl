@@ -108,16 +108,16 @@ bfs:hasCousin rdf:type owl:ObjectProperty ;
 bfs:hasDifferentiationOfSelf rdf:type owl:ObjectProperty ;
                              rdfs:domain bfs:Person ;
                              rdfs:range bfs:DifferentiationOfSelf ;
-                             rdfs:comment "Indicates the level of differentiation of self that an individual possesses." ;
-                             rdfs:label "has differentiation of self" .
+                             rdfs:comment "Indicates the level of differentiation of self that an individual possesses."@en ;
+                             rdfs:label "has differentiation of self"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasEmotionalCutoff
 bfs:hasEmotionalCutoff rdf:type owl:ObjectProperty ;
                        rdfs:domain bfs:Person ;
                        rdfs:range bfs:EmotionalCutoff ;
-                       rdfs:comment "Indicates that an individual has an emotional cutoff." ;
-                       rdfs:label "has emotional cutoff" .
+                       rdfs:comment "Indicates that an individual has an emotional cutoff."@en ;
+                       rdfs:label "has emotional cutoff"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasExPartner
@@ -154,15 +154,15 @@ bfs:hasFamilyMember rdf:type owl:ObjectProperty ;
 bfs:hasFamilyProjectionProcess rdf:type owl:ObjectProperty ;
                                rdfs:domain bfs:Family ;
                                rdfs:range bfs:FamilyProjectionProcess ;
-                               rdfs:comment "Indicates the presence of a family projection process within a family." ;
-                               rdfs:label "has family projection process" .
+                               rdfs:comment "Indicates the presence of a family projection process within a family."@en ;
+                               rdfs:label "has family projection process"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasFullSibling
 bfs:hasFullSibling rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf bfs:hasSibling ;
                    rdf:type owl:SymmetricProperty ;
-                   rdfs:comment "Represents the relationship where two individuals share both biological parents." ;
+                   rdfs:comment "Represents the relationship where two individuals share both biological parents."@en ;
                    rdfs:label "hasFullSibling"@en .
 
 
@@ -211,8 +211,8 @@ bfs:hasInterpersonalRelationship rdf:type owl:ObjectProperty ,
 bfs:hasMultigenerationalTransmissionProcess rdf:type owl:ObjectProperty ;
                                             rdfs:domain bfs:Family ;
                                             rdfs:range bfs:MultigenerationalTransmissionProcess ;
-                                            rdfs:comment "Indicates the presence of a multigenerational transmission process within a family." ;
-                                            rdfs:label "has multigenerational transmission process" .
+                                            rdfs:comment "Indicates the presence of a multigenerational transmission process within a family."@en ;
+                                            rdfs:label "has multigenerational transmission process"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasParent
@@ -235,7 +235,7 @@ bfs:hasSex rdf:type owl:ObjectProperty ;
            rdfs:domain bfs:Person ;
            rdfs:range bfs:Sex ;
            rdfs:comment "Represents the biological sex of a person, which is typically categorized as male, female, or intersex."@en ;
-           rdfs:label "hasSex" .
+           rdfs:label "hasSex"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSibling
@@ -243,7 +243,7 @@ bfs:hasSibling rdf:type owl:ObjectProperty ,
                         owl:SymmetricProperty ;
                rdfs:domain bfs:Person ;
                rdfs:range bfs:Person ;
-               rdfs:comment "Represents the relationship where two individuals have an undefined sibling relationship.."@en ;
+               rdfs:comment "Represents the relationship where two individuals have an undefined sibling relationship."@en ;
                rdfs:label "hasSibling"@en .
 
 
@@ -251,7 +251,7 @@ bfs:hasSibling rdf:type owl:ObjectProperty ,
 bfs:hasSiblingPosition rdf:type owl:ObjectProperty ;
                        rdfs:domain bfs:Person ;
                        rdfs:range bfs:SiblingPosition ;
-                       rdfs:comment "Represents a persons sibling position."@en ;
+                       rdfs:comment "Represents a person’s sibling position in the family structure."@en ;
                        rdfs:label "hasSiblingPosition"@en .
 
 
@@ -259,8 +259,8 @@ bfs:hasSiblingPosition rdf:type owl:ObjectProperty ;
 bfs:hasSocietalEmotionalProcess rdf:type owl:ObjectProperty ;
                                 rdfs:domain bfs:Family ;
                                 rdfs:range bfs:SocietalEmotionalProcess ;
-                                rdfs:comment "Indicates the influence of societal factors on the family's emotional process." ;
-                                rdfs:label "has societal emotional process" .
+                                rdfs:comment "Indicates the influence of societal factors on the family's emotional process."@en ;
+                                rdfs:label "has societal emotional process"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasSpouse
@@ -287,8 +287,8 @@ bfs:hasUncle rdf:type owl:ObjectProperty ;
 bfs:influences rdf:type owl:ObjectProperty ;
                rdfs:domain bfs:Person ;
                rdfs:range bfs:Person ;
-               rdfs:comment "Indicates that one individual influences another within the family system." ;
-               rdfs:label "influences" .
+               rdfs:comment "Indicates that one individual influences another within the family system."@en ;
+               rdfs:label "influences"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#isAuntOf
@@ -301,15 +301,17 @@ bfs:isAuntOf rdf:type owl:ObjectProperty ;
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#isCaretakerOf
-bfs:isCaretakerOf rdf:type owl:ObjectProperty .
+bfs:isCaretakerOf rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Represents the relationship where a person is the caretaker of another individual."@en ;
+                  rdfs:label "isCaretakerOf"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#isInTriangle
 bfs:isInTriangle rdf:type owl:ObjectProperty ;
                  rdfs:domain bfs:Person ;
                  rdfs:range bfs:Triangle ;
-                 rdfs:comment "Indicates that an individual is part of a triangle." ;
-                 rdfs:label "is in triangle" .
+                 rdfs:comment "Indicates that an individual is part of a triangle."@en ;
+                 rdfs:label "is in triangle"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#isUncleOf
@@ -327,12 +329,16 @@ bfs:isUncleOf rdf:type owl:ObjectProperty ;
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasContactInformation
 bfs:hasContactInformation rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf owl:topDataProperty .
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:comment "Represents the contact information of a person."@en ;
+                          rdfs:label "hasContactInformation"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasDate
 bfs:hasDate rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty .
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:comment "Represents a generic date property."@en ;
+            rdfs:label "hasDate"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasDateOfBirth
@@ -382,7 +388,9 @@ bfs:hasLastName rdf:type owl:DatatypeProperty ;
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasName
 bfs:hasName rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty .
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:comment "Represents the name of a person."@en ;
+            rdfs:label "hasName"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasNationality
@@ -506,7 +514,7 @@ bfs:Sex rdf:type owl:Class ;
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#SiblingPosition
 bfs:SiblingPosition rdf:type owl:Class ;
                     rdfs:subClassOf bfs:Enumeration ;
-                    rdfs:comment "An enumeration class to represent a persons position in the birth order."@en ;
+                    rdfs:comment "An enumeration class to represent a person's position in the birth order."@en ;
                     rdfs:label "SiblingPosition"@en .
 
 
@@ -531,6 +539,7 @@ bfs:Triangle rdf:type owl:Class ;
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#Female
 bfs:Female rdf:type owl:NamedIndividual ,
                     bfs:Sex ;
+           rdfs:comment "Represents the female sex."@en ;
            rdfs:label "Female"@en .
 
 
@@ -544,12 +553,14 @@ bfs:Firstborn rdf:type owl:NamedIndividual ,
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#Intersex
 bfs:Intersex rdf:type owl:NamedIndividual ,
                       bfs:Sex ;
+             rdfs:comment "Represents an individual with intersex traits."@en ;
              rdfs:label "Intersex"@en .
 
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#Male
 bfs:Male rdf:type owl:NamedIndividual ,
                   bfs:Sex ;
+         rdfs:comment "Represents the male sex."@en ;
          rdfs:label "Male"@en .
 
 
@@ -593,8 +604,8 @@ bfs:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 bfs:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Rule-hasFullSibling" ;
+   rdfs:comment "A SWRL rule for determining full siblings."@en ;
+   rdfs:label "Rule-hasFullSibling"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -648,8 +659,8 @@ bfs:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Rule-hasAunt" ;
+   rdfs:comment "A SWRL rule for determining the aunt relationship."@en ;
+   rdfs:label "Rule-hasAunt"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -684,8 +695,8 @@ bfs:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "Rule-hasHalfSibling" ;
+   rdfs:comment "A SWRL rule for determining half-siblings."@en ;
+   rdfs:label "Rule-hasHalfSibling"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
