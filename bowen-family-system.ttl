@@ -183,6 +183,7 @@ bfs:hasGrandchild rdf:type owl:ObjectProperty ;
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#hasGrandparent
 bfs:hasGrandparent rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:propertyChainAxiom (bfs:hasBiologicalParent bfs:hasBiologicalParent) ;
                    rdfs:domain bfs:Person ;
                    rdfs:range bfs:Person ;
                    rdfs:comment "Represents the relationship where an individual has a grandparent."@en ;
