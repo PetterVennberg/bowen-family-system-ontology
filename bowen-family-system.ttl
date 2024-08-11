@@ -449,7 +449,6 @@ bfs:hasSocialSecurityNumber rdf:type owl:DatatypeProperty ;
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#DifferentiationOfSelf
 bfs:DifferentiationOfSelf rdf:type owl:Class ;
-                          rdfs:subClassOf owl:Thing ;
                           rdfs:comment "The ability of an individual to maintain their sense of self while staying emotionally connected to the family."@en ;
                           rdfs:label "Differentiation of Self"@en .
 
@@ -494,6 +493,21 @@ bfs:MultigenerationalTransmissionProcess rdf:type owl:Class ;
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#Person
 bfs:Person rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty bfs:hasParent ;
+                             owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                             owl:onClass bfs:Person
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty bfs:hasSex ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass bfs:Sex
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty bfs:hasSiblingPosition ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass bfs:SiblingPosition
+                           ] ;
            rdfs:comment "Represents an individual human being within the kinship network."@en ;
            rdfs:label "Person"@en .
 
@@ -527,7 +541,6 @@ bfs:SocietalEmotionalProcess rdf:type owl:Class ;
 
 ###  https://www.vberg.dev/ontologies/bowen-familiy-system#Triangle
 bfs:Triangle rdf:type owl:Class ;
-             rdfs:subClassOf owl:Thing ;
              rdfs:comment "A three-person relationship system that is the smallest stable relationship unit in a family system."@en ;
              rdfs:label "Triangle"@en .
 
