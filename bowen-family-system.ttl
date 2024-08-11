@@ -741,6 +741,41 @@ bfs:s rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "A SWRL rule for determining full siblings." ;
+   rdfs:label "Rule-hasSibling" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> bfs:hasParent ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> bfs:c1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> bfs:p
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> bfs:hasParent ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> bfs:c2 ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> bfs:p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> bfs:c1 ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> bfs:c2
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> bfs:hasSibling ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> bfs:c1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> bfs:c2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "A SWRL rule for determining half-siblings."@en ;
    rdfs:label "Rule-hasHalfSibling"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
