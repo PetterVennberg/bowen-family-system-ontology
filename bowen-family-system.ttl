@@ -585,6 +585,15 @@ bfs:Thirdborn rdf:type owl:NamedIndividual ,
               rdfs:label "Thirdborn"@en .
 
 
+###  https://www.vberg.dev/ontologies/bowen-familiy-system#Unknown
+bfs:Unknown rdf:type owl:NamedIndividual ,
+                     bfs:Person ,
+                     bfs:Sex ,
+                     bfs:SiblingPosition ;
+            rdfs:comment "Represents an individual or value that is unknown."@en ;
+            rdfs:label "Unknown"@en .
+
+
 #################################################################
 #    Rules
 #################################################################
